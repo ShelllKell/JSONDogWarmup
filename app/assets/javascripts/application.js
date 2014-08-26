@@ -45,5 +45,16 @@ $(document).ready(function () {
     ]
   };
   // Write come code to add the dogs to the table !!!!
+
+  $.each(gschoolDogs["dogs"], function (index, element) {
+    $('#dogs').append(
+      '<tr>',
+        '<td>' + element["owner"],
+        '<td>' + element["name"],
+        '<td>' + element["preferences"][0]["favoriteFood"],
+        '<td>' + element["preferences"][1]["favoriteToy"]
+      )
+  });
+
 });
 
